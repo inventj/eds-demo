@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background: #f8f9fa;
+}
+
+.header__menu {
+    display: none; /* hide on desktop */
+}
+
+.header__logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__navigation {
+    flex-grow: 3;
+}
+
+.header__navigation-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navigation-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .header__navigation {
+        display: none; /* hide by default, show on hamburger click */
+    }
+}
